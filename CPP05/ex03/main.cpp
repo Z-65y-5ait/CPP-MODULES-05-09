@@ -25,17 +25,19 @@ int main()
 
         charlie.signForm(pardon);
         charlie.executeForm(pardon);
-
+        {
+            Intern someRandomIntern;
+            AForm* rrf;
+            rrf = someRandomIntern.makeForm("RobotomyRequestForm", "Bender");
+            if (rrf)
+            {
+                std::cout << *rrf << std::endl;
+                delete rrf;
+            }
+        }
     }
     catch (std::exception & e) {
         std::cout << "Exception: " << e.what() << std::endl;
-    }
-
-    {
-        Intern someRandomIntern;
-        AForm* rrf;
-        rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-        std::cout << rrf << std::endl;
     }
     return 0;
 }

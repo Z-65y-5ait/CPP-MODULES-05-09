@@ -23,6 +23,11 @@ class ShrubberyCreationForm : public AForm
 			public:
 				virtual const char * what() const throw();
 		};
+		class FileOpenFailed : public std::exception
+		{
+			public:
+				virtual const char * what() const throw();
+		};
 };
 
 #endif

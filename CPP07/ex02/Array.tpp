@@ -10,7 +10,8 @@ Array<T>::Array()
 template <typename T>
 Array<T>::~Array()
 {
-	delete[] this->arr;
+	if (this->arr)
+		delete[] this->arr;
 }
 
 template <typename T>
@@ -38,7 +39,8 @@ Array<T>& Array<T>::operator=(Array<T>& a)
 {
 	if (this != &a)
 	{
-		delete[] arr;
+		if (arr)
+			delete[] arr;
 		this->size = a.size;
 		this->arr = new T[size];
 		size_t i = 0;

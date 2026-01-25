@@ -41,7 +41,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     	throw (GradeTooLowException());
 	std::ofstream file((this->target + "_shrubbery").c_str());
 	if (!file)
-    	throw (std::ofstream::failure("Failed to open file"));
+    	throw (FileOpenFailed());
 	file << "   /\\\n";
 	file << "  /  \\\n";
 	file << " /++++\\\n";
@@ -51,4 +51,9 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 const char* ShrubberyCreationForm::FormNotSignedException::what() const throw()
 {
 	return ("Not signed!");
+}
+
+const char * ShrubberyCreationForm::FileOpenFailed::what() const throw()
+{
+	return ("Failed to open!");
 }

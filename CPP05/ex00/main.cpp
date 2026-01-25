@@ -20,7 +20,6 @@ int main()
     catch (const std::exception& e) {
         std::cout << "Exception caught: " << e.what() << std::endl;
     }
-
     try {
         Bureaucrat b3("Mouad", 75);
         std::cout << b3 << std::endl;
@@ -31,6 +30,7 @@ int main()
     }
     try{
         Bureaucrat b4("Aymane", 150);
+        std::cout << b4 << std::endl;
         b4.DecrementGrade();
     }
     catch (const std::exception & e) {

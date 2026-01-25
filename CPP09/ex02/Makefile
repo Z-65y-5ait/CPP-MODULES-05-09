@@ -1,16 +1,16 @@
-CXX = c++
-NAME = array
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CC = c++
+NAME = MutantStack
+FLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-%.o: %.cpp array.hpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+%.o: %.cpp MutantStack.hpp
+	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -rf $(OBJ)

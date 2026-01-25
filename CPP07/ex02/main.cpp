@@ -13,7 +13,6 @@ int main(int, char**)
         numbers[i] = value;
         mirror[i] = value;
     }
-    //SCOPE
     {
         Array<int> tmp = numbers;
         Array<int> test(tmp);
@@ -48,6 +47,6 @@ int main(int, char**)
     {
         numbers[i] = rand();
     }
-    delete [] mirror;//
-    return 0;
+    delete [] mirror;
+    return (0);
 }

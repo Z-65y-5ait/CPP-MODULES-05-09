@@ -62,7 +62,8 @@ void identify(Base& p)
 	std::cout << "undefined type" << std::endl;
 }
 
-int main() {
+int main()
+{
     std::srand(static_cast<unsigned int>(std::time(NULL)));
 	int i = 0;
     while (i < 6)

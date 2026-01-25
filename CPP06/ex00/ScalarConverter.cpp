@@ -69,5 +69,4 @@ void ScalarConverter::convert(std::string literal)
 			std::cout << "double: " << d << std::endl;
 		}
 	}
-	
 }

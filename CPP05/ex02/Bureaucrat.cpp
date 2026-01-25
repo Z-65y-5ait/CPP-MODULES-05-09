@@ -6,15 +6,18 @@ Bureaucrat::Bureaucrat()
 {
 	std::cout << "Default Constructor Called" << std::endl;
 }
+
 Bureaucrat::~Bureaucrat()
 {
 	std::cout << "Destructor Called" << std::endl;
 }
+
 Bureaucrat::Bureaucrat(const Bureaucrat& b)
 	: name(b.name), grade(b.grade)
 {
 	
 }
+
 Bureaucrat::Bureaucrat(std::string const name, int grade)
 	: name(name), grade(grade)
 {
