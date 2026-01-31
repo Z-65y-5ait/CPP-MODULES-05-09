@@ -1,12 +1,12 @@
 CC = c++
-NAME = MutantStack
+NAME = btc
 FLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp
+SRC = main.cpp BitcoinExchange.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-%.o: %.cpp MutantStack.hpp
+%.o: %.cpp BitcoinExchange.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)

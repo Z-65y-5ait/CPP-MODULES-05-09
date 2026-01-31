@@ -1,12 +1,12 @@
 CC = c++
-NAME = MutantStack
+NAME = PmergeMe
 FLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp
+SRC = main.cpp PmergeMe.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-%.o: %.cpp MutantStack.hpp
+%.o: %.cpp PmergeMe.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
